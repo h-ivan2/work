@@ -1,0 +1,12 @@
+body{
+color: aquamarine;
+background-color: black;
+
+}
+.navigation{
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    padding: 40px;
+    text-align: center;
+    font-size: large;
+}
