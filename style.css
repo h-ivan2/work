@@ -192,5 +192,15 @@ body{
             z-index: -1;
 
         }
-
-        
+         a{
+            color: blue;
+            text-decoration: none;
+         }
+          a:hover{
+            color: red;
+            text-decoration: underline;
+          }
+          a:active{
+            color: black;
+            
+          }
