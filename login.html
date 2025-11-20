@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+
+    <style>
+   #login{
+     background-color: #234098;
+     width: 30%;
+
+   }
+   input[type="text"],input[type="password"]{
+
+    width: 70%;
+    font-size: 1em;
+    padding:5px;
+    margin: 5px;
+   }
+   input[type="submit"]{
+  font-size: 1em;
+  padding: 5px;
+  margin:5px;
+
+   }
+   label{
+    font-size: 2em;
+   }
+
+    </style>
+</head>
+<body>
+    <div id="login">
+    <h2>Authentication</h2>
+    <form action="#" method="GET"><!--POST: for submitting sensitive information-->
+
+   <div> <label for="uname"> Username</label> 
+    <input type="text" name="Username" id="uname"><!--form control are 3 input, select , text area
+    
+    in input there are radio, submit , --></div>
+   <div> <label for="pass"> Password</label>
+    <input type="password" name="password" id="pass">
+    <input type="submit" value="login"><!--<button>submit</button>-->
+</div>
+    </form>
+    </div>
+</body>
+</html>

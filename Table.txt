@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of students</title>
+</head>
+<body>
+<table>
+<tr>
+<td>id</td>
+<td>Name></td>
+<td>Age</td>
+<td>School</td>
+</tr>
+<tr>
+<td>Ange</td>
+<td>15</td>
+<td>RCA</td>
+</tr>
+<tr>
+<td>Erick</td>
+<td>14</td>
+<td>RCA</td>
+</tr>
+<tr>
+<td>John</td>
+<td>16<td>
+<td>G.S Nyagahinika</td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>18</td>
+<td>G.S Mukamira</td>
+</tr>
+</table>
+    
+</body>
+</html>
