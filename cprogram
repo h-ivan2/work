@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main(){
+ int a,sum=0;
+ int b, i;
+ printf("Enter a number you want: ");
+ scanf("%d", &a);
+ for(b;b<=a-1;b++){
+    if(a%b==0){
+    i=sum+a;
+   printf("The sum of its factors is %d" ,i )
+    }
+
+ }
+
+}
+
