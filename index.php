@@ -82,7 +82,7 @@ if($num1%2==0 && $num2%2==0){
   echo"The product of the two odd numbers is " . $product;
 
 }else{
-echo"The two numbers are not both even or  both odd";
+echo"";
 }
 }
 ?>
