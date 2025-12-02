@@ -8,7 +8,105 @@
 <body>
     <h1 id="title">Hello world </h1>
     <p class="text">I am learning DOM!</p>
+    <p id="message"></p>
+    
     <button>CLick me</button>
-    <script src="indexe.js"></script>
-</body>
+    <button id="remove"></button>
+   
+
+<script>
+    const body=document.getElementsByTagName("body")[0];
+    body.style.backgroundColor="aliceblue";
+ alert("I am learning DOM");
+
+const title =document.getElementById("title")
+ title.innerText="Hello again";
+
+ //const title=document.querySelector('#title')
+ //title.innerText="Hello";
+
+ const para=document.getElementsByClassName("text")[0]
+ para.innerText="I am becoming an expert";
+
+ //let name=document.querySelector(".text")
+ //name.innerText="I am good";
+
+ let  newpara=document.getElementsByClassName("text")[0]
+ newpara.innerHTML="Hey there I have just known how to add a paragraph";
+ newpara.style.color="red";
+ newpara.style.backgroundColor="aliceblue";
+ newpara.style.fontSize="40px";
+
+ const newPara=document.createElement("p");
+ newPara.innerText="Hey again I have just created a new text";
+ newPara.style.color="gold";
+ newPara.style.backgroundColor="aliceblue"
+ document.body.appendChild(newPara);
+ newPara.style.fontSize="40px";
+
+
+ const button=document.getElementsByTagName('button')[0]
+ const message=document.getElementById("message")
+ button.addEventListener("click", function(){
+    console.log("you have submitted successfully");
+    message.innerText="You have submitted successfully";
+    message.style.color="gold";
+    message.style.backgroundColor="black";
+    message.style.fontSize="40px";
+    message.addEventListener("mouseenter", function(){
+        message.style.backgroundColor="green"
+        message.style.color="purple"
+    });
+
+    message.addEventListener("mouseleave", function(){
+    message.style.color="aquamarine";
+    message.style.backgroundColor="blue";
+
+
+    })
+});
+button.addEventListener("mouseenter", function(){
+   button.style.backgroundColor="gold";
+
+});
+
+button.addEventListener("mouseleave", function(){
+    button.style.backgroundColor="aliceblue";
+});
+ button.innerText="Submit";
+ button.style.borderRadius="10px";
+
+ const div=document.createElement("div");
+ document.body.appendChild(div);
+ div.id="great";
+ div.innerText="Hey there I have just added a new div";
+ div.style.color="red";
+ div.style.backgroundColor="gold";
+ div.style.fontSize="40px";
+ div.innerHTML='<h2 id="good">Learining is really a great thing to do</h2>'
+let inner=document.getElementById("good")
+inner.style.color="darkblue";
+inner.style.fontSize="40px";
+
+const remove=document.getElementById("remove")
+remove.innerHTML="Remove "
+remove.addEventListener("click", function(){
+    newPara.remove();
+});
+remove.addEventListener("mouseenter", function(){
+    remove.style.backgroundColor="orange";
+    remove.style.color="lightgreen";
+});
+
+remove.addEventListener("mouseleave", function(){
+    remove.style.backgroundColor="aliceblue";
+    remove.style.color="blue";
+})
+remove.style.borderRadius="10px"
+
+
+ </script>
+
+  
+ </body>
 </html>
