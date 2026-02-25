@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modechangerstuff</title>
+</head>
+<body>
+<div id="mood-widget">
+        <h1>Mindful Moment</h1>
+        <p id="mode-display"><!-- JavaScript will put current mode text here --></p>
+         <!--
+        <div id="focus-mode" class="mode-content"> Content for Focus here </div>
+        <div id="relax-mode" class="mode-content">Content for Relax here </div>
+        <div id="breathe-mode" class="mode-content"> Content for Breathe here </div> -->
+        
+        <button id="cycle-button">Cycle Mode</button>
+    </div>
+
+    <script>
+
+    const body = document.getElementsByTagName("body")[0];
+    body.style.justifyContent="center";
+    body.style.alignItems="center";
+    body.style.display="flex";
+    body.style.minHeight="80vh";
+
+    const modeFocus=document.getElementById("mood-widget");
+    modeFocus.style.textAlign="center";
+    modeFocus.style.backgroundColor="lightblue";
+    modeFocus.style.borderRadius="10px";
+    modeFocus.style.padding="30px";
+    modeFocus.style.display="inline-block";
+    modeFocus.style.height="200px"
+    modeFocus.style.width="300px"
+    modeFocus.style.fontSize="20px";
+
+
+    const modetext=document.getElementById("mode-display");
+    
+    
+    const modes=[
+        "Focusmode: This is the mode for focusing on something completely",
+        "Relax mode:Take a deep breath, relax your shoulders, and let go of the tension",
+        "Breathe: Follow a 4-4-4 breathing pattern : inhale 4s , hold 4s , exhale 4s."
+
+    ]
+
+    const color=[ "blue", "green", "aquamarine"];
+    const textColor=["#000000","#800000","#006400"];
+   
+    let currentMode=0;
+    modetext.textContent=modes[currentMode];
+    modeFocus.style.backgroundColor=color[currentMode];
+    modetext.style.color=textColor[currentMode];
+
+   const button=document.getElementById("cycle-button")
+    button.style.backgroundColor="lightblue"
+    button.style.color="red"
+
+    button.addEventListener("click", function(){
+    currentMode=(currentMode+1) % modes.length;
+    modetext.textContent=modes[currentMode];
+    modeFocus.style.backgroundColor=color[currentMode];
+    modetext.style.color=textColor[currentMode];
+
+    });
+
+    
+    
+    
+    
+    
+
+    </script>
+</body>
+</html>
