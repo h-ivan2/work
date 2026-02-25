@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation</title>
+</head>
+<body>
+
+    <h1>Ur Location</h1>
+    <button onclick="getLocation()">Get Location</button>
+
+    <p id="output"></p>
+
+    <canvas id="myCanvas" width="650" height="650"></canvas>
+
+    <script>
+
+    const canvas=document.getElementById("myCanvas")
+    const ctx=canvas.getContext("2d")
+
+    ctx.strokeStyle ="blue"
+    ctx.strokeRect(50,50,600,600)
+    ctx.font ="10 px Arial";
+    ctx.fillStyle="black";
+    ctx.fillText("Hello there am using canvas it is great to be with u people" , 50, 60)
+    ctx.fillText("I have created a new line using canvas",50,75)
+
+    ctx.beginPath();
+    ctx.moveTo(150,200)
+    ctx.lineTo(200,50);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(50,200)
+    ctx.lineTo(150,200)
+    ctx.stroke();
+
+    function getLocation(){
+
+if(!navigator.geolocation){
+    document.getElementById("output").textContent= 
+    "Geolocation is not supported in ur browser";
+    return ;
+}
+
+navigator.geolocation.getCurrentPosition(displayPosition,errorHandler)
+
+function displayPosition(position){
+    const latitude=position.coords.latitude;
+    const longitude=position.coords.longitude;
+    const accuracy=position.coords.accuracy;
+
+    document.getElementById("output").textContent=
+        `Latitude: ${latitude} ,Longitude : ${longitude} , Accuracy : ${accuracy}  meters`;
+    }
+
+}
+function errorHandler(error){
+    document.getElementById("output").textContent =
+    "Unable to fetch location"
+}
+
+    
+
+    </script>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Language</th>
+        </tr>
+
+        <tr>
+            <td>2014</td>
+            <td>HTML5</td>
+        </tr>
+
+        <tr>
+            <td>1999</td>
+            <td>CSS3</td>
+        </tr>
+        <tr>
+            <td>1995</td>
+            <td>Javascript</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
