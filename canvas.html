@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <script>
+       const canvas=document.getElementById("canvas")
+       const ctx=canvas.getContext("2d")
+
+       /*ctx.fillStyle="blue";
+       ctx.fillRect(50,50,200,200)*/
+
+       ctx.strokeStyle="blue";
+       ctx.strokeRect(50,50,400,400)
+
+       ctx.font="15px Arial"
+       ctx.fillStyle="black"
+       ctx.fillText("I am learning the use of canvas", 60 , 70)
+
+
+       ctx.beginPath();
+       ctx.moveTo(50,50);
+       ctx.lineTo(80,90);
+       ctx.stroke();
+    </script>
+    
+</body>
+</html>
