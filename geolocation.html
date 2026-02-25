@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation</title>
+
+    
+     
+    <body>
+    <h1>Ur Location</h1>
+    <button onclick="getLocation()">Get Location</button>
+    <p id="result"></p>
+    <script>
+
+function getLocation(){
+   if(!navigator.geolocation){
+    document.getElementById("result").textContent ="Geolocation is not supported in ur browser";
+   }
+   navigator.geolocation.getCurrentPosition(ivanPosition,agapePosition);
+
+  function ivanPosition(position){
+    const latitude=position.coords.latitude;
+    const longitude=position.coords.longitude;
+    
+    document.getElementById("result").textContent=
+    ` Latitude :${latitude} , Longitude : ${longitude} `
+
+  }
+
+  function agapePosition(error){
+
+    document.getElementById("result").textContent= "Unable to fetch location"
+  }
+}
+    </script>
+   </body>
+   </html>
