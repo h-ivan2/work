@@ -104,3 +104,7 @@ paloma('age is ');
 let Agape="IVAN"
 console.log(Agape.length);
 console.log(Agape.charAt(1));
+
+const balance = (eth) =>{
+  
+}
