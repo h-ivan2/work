@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+
+    <style>
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+        
+form{
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 2%;
+    background-color: aliceblue;
+}
+
+input[type=submit]{
+
+    width: 100%;
+    color: blue;
+    background-color: aquamarine;
+    height: 25px;
+    border-radius: 10px;
+
+}
+
+
+    </style>
+</head>
+     
+<body>
+    
+
+<section id="form">
+    <form  action="#" method="POST">
+         <h2>Student Acccess Inquiry </h2>
+    <div>
+    <label for="fName">FirstName</label><input type="text"  id="fName" name="fName">
+    </div>
+    <br>
+    <div>
+    <label for="lName">LastName</label><input type="text" id="lName" name="lName">
+    </div>
+    <br>
+    <div>
+     Email:<input type="text" id="email"  name="email">
+    </div>
+    
+     <div>
+     <label for="gender">Gender:</label>
+     </div>
+      Male:<input type="radio" name="gender" id="Male" value="Male"> 
+      Female:<input type="radio" name="gender" id="Female" value="Female">
+ 
+     <p>Spoken languages</p>
+     Kinyarwanda <input type="checkbox" name="kiny" value="Kinyarwanda">
+     <br>
+     Eglish <input type="checkbox"  name="eng"  value="English">
+     <br>
+     French <input type="checkbox"  name="fra" value="French">
+
+     <div>
+     <label> Level</label>
+      <select name="level" > 
+      <option>Junior 1</option>
+      <option>Senior 1</option>
+      <option>Senior 2</option>
+      <option>Senior 3</option>
+      </select>
+      </div>
+      <br>
+
+    <label for="pass">Password</label>
+    <input type="text" name="pass" id="name">
+
+    <div>
+    <label for="Request">Request:</label>
+    <br>
+    <textarea placeholder="message" id="Request"></textarea> 
+    </div>
+    <input type="submit" value="submit">
+    </form>
+
+    </section>
+
+
+     
+    
+</body>
+</html>
